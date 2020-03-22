@@ -1,1 +1,25 @@
 
+//SUPER DRAFT!!!!
+
+//how I see steps that should be done to solve the problem
+
+
+//here goes the list of main parameters 
+ M1, M2, M3, M0
+ constant g
+ t, t0
+ friction f0, f1, f2, f3
+ and x1, x2, x3, y1, y2, y3
+ 
+ //methods to compute;
+ force()
+ 
+ friction_one()
+ friction_two()
+ friction_three()
+ 
+ mass_one()
+ mass_two()
+ mass_three()
+ 
+ time()
