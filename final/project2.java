@@ -30,14 +30,14 @@ public class project2 {
 				direction = true;
 		}
 
-		double m1Acceleration(){
+	public 	double m1Acceleration(){
 			double m1Acceleration = (force - myu1*(M1.getMass()*g + M2.getMass()*g) - M2.getMass()*myu2*g) / M1.getMass();
 			if (m1Acceleration < 0)
 				return 0;
 			    return m1Acceleration;
-		}
+		} 
 
-		double getm2Accel(){
+	public	double getm2Accel(){
 			double friction = -(M2.getMass()*myu2*g);
 
 			double frictionOnM2 = friction;
@@ -51,11 +51,13 @@ public class project2 {
 
 			if (mrAccel < 0 && force == 0)
 				return 0;
-
-
+			System.out.print(Xforce); 
+			System.out.print(mrAccel); 
 			return mrAccel;
+			
 		}
-
+		
+		
 		void action(){
 			
 			M1.setAcceleration(m1Acceleration());
@@ -70,7 +72,7 @@ public class project2 {
 				double dxOfm1 = ((M1.getVelocity()*dt) + M1.getAccel() * ((dt = 0.001*dt) / 2));
 				double dvOfm1 = M1.getAccel()*dt;
 				M1.setVelocity(M1.getVelocity() + dvOfm1);
-
+				
 
 				double dxofm2 = ((M2.getVelocity()*dt) + M2.getAccel() *((dt = 0.001*dt) / 2));
 				double dvOfm2 = M2.getAccel()*dt;
@@ -94,15 +96,20 @@ public class project2 {
 
 				M3.setyCoordinate(M3.getyCoordinate() + dyOfm3);
 
-				if (M3.getyCoordinate() < 3)
-					M3.setyCoordinate(3);	
-				else if (M3.getyCoordinate() > 10)
-					M3.setyCoordinate(10);	
+				if (M3.getyCoordinate() < 5)
+					M3.setyCoordinate(5);	
+				else if (M3.getyCoordinate() > 15)
+					
+					M3.setyCoordinate(15);	
+				
 				t += dt = 0.001;
 			}
+			System.out.println(M1.getyCoordinate());
+			System.out.println(M1.getxCoordinate());
+			System.out.println(M2.getyCoordinate());
+			System.out.println(M2.getxCoordinate());
 
 		}
-		
 		
 		
 public static void main(String[] args) {
@@ -142,9 +149,7 @@ public static void main(String[] args) {
         
       
         project2 test = new project2(my1, my2, my3, new Mass(x1, y1, m1), new Mass(x2, y2, m2), new Mass(x3, y3, m3), f);
-         
+        test.action();
     }
 		
 }
-
-
