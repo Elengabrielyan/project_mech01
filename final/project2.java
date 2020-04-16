@@ -36,7 +36,7 @@ public class project2 {
 				return 0;
 			    return m1Acceleration;
 		} 
-
+  
 	public	double getm2Accel(){
 			double friction = -(M2.getMass()*myu2*g);
 
@@ -51,8 +51,8 @@ public class project2 {
 
 			if (mrAccel < 0 && force == 0)
 				return 0;
-			System.out.print(Xforce); 
-			System.out.print(mrAccel); 
+			System.out.println(Xforce+" Force"); 
+			System.out.println(mrAccel+"Accel"); 
 			return mrAccel;
 			
 		}
