@@ -1,5 +1,4 @@
 
-
 public class Mass{
 	private double xCoordinate;
 	private double yCoordinate;
@@ -13,7 +12,8 @@ public class Mass{
 
 		xCoordinate = x;
 		yCoordinate = y;
-	}
+		this.mass = mass;
+	}  
 
 //setters
 	void setxCoordinate(double x){
